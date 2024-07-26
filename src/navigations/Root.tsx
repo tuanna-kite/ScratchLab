@@ -12,86 +12,79 @@ import Detail from "../screens/detail/Detail";
 import PracticeDetail from "../screens/practice/PracticeDetail";
 import { UseTokenColor } from "../hook/UseTokenColor";
 import PuzzleScreen from "../screens/puzzle/PuzzleScreen";
+import DetailCommon from "../screens/detail/DetailCommon";
 
 const Stack = createNativeStackNavigator<RootStackParams>();
 
 const Root = () => {
-	const colors = UseTokenColor();
-	return (
-		<>
-			<LoadingOverlay />
-			<ErrorOverlay />
-			<NavigationContainer>
-				<Stack.Navigator
-					screenOptions={{
-						headerShown: false,
-					}}
-				>
-					<Stack.Screen
-						name="TabNavigation"
-						component={TabNavigation}
-					/>
-					<Stack.Screen
-						name="Detail"
-						component={Detail}
-					/>
+  const colors = UseTokenColor();
+  return (
+    <>
+      <LoadingOverlay />
+      <ErrorOverlay />
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="TabNavigation" component={TabNavigation} />
+          <Stack.Screen name="Detail" component={Detail} />
 
-					<Stack.Screen
-						name="QuizzResult"
-						component={QuizzResult}
-						options={{
-							headerShown: true,
-							title: "Kết quả trắc nghiệm",
-							headerBackTitleVisible: false,
-							headerStyle: {
-								backgroundColor: colors.white,
-							},
-							headerTitleStyle: {
-								color: colors.primary600,
-							},
-							headerTintColor: colors.primary600,
-						}}
-					/>
-					<Stack.Screen
-						name="QuizzScreen"
-						component={QuizzScreen}
-						options={{
-							headerShown: true,
-							title: "Bài trắc nghiệm",
-							headerBackTitleVisible: false,
-							headerStyle: {
-								backgroundColor: colors.white,
-							},
-							headerTitleStyle: {
-								color: colors.primary600,
-							},
-							headerTintColor: colors.primary600,
-						}}
-					/>
-					<Stack.Screen
-						name="PracticeDetail"
-						component={PracticeDetail}
-						options={{
-							headerShown: true,
-							title: "Bài thực hành",
-							headerBackTitleVisible: false,
-							headerStyle: {
-								backgroundColor: colors.white,
-							},
-							headerTitleStyle: {
-								color: colors.primary600,
-							},
-							headerTintColor: colors.primary600,
-						}}
-					/>
-					<Stack.Screen
-						name="PuzzleScreen"
-						component={PuzzleScreen}
-					/>
-				</Stack.Navigator>
-			</NavigationContainer>
-		</>
-	);
+          <Stack.Screen name="DetailCommon" component={DetailCommon} />
+          <Stack.Screen
+            name="QuizzResult"
+            component={QuizzResult}
+            options={{
+              headerShown: true,
+              title: "Kết quả trắc nghiệm",
+              headerBackTitleVisible: false,
+              headerStyle: {
+                backgroundColor: colors.white,
+              },
+              headerTitleStyle: {
+                color: colors.primary600,
+              },
+              headerTintColor: colors.primary600,
+            }}
+          />
+          <Stack.Screen
+            name="QuizzScreen"
+            component={QuizzScreen}
+            options={{
+              headerShown: true,
+              title: "Bài trắc nghiệm",
+              headerBackTitleVisible: false,
+              headerStyle: {
+                backgroundColor: colors.white,
+              },
+              headerTitleStyle: {
+                color: colors.primary600,
+              },
+              headerTintColor: colors.primary600,
+            }}
+          />
+          <Stack.Screen
+            name="PracticeDetail"
+            component={PracticeDetail}
+            options={{
+              headerShown: true,
+              title: "Bài thực hành",
+              headerBackTitleVisible: false,
+              headerStyle: {
+                backgroundColor: colors.white,
+              },
+              headerTitleStyle: {
+                color: colors.primary600,
+              },
+              headerTintColor: colors.primary600,
+            }}
+          />
+          <Stack.Screen name="PuzzleScreen" component={PuzzleScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
+  );
 };
 
 export default Root;
