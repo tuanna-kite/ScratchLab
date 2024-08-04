@@ -90,3 +90,25 @@ export const practiceData: { [key: string]: PracticeData[] } = {
     // },
   ],
 };
+export const excercises: Exercise[] = [
+	{
+		title: "Ô tô chạy",
+		description: "alooo",
+		image: require("../assets/practice1.png"),
+	},
+	{
+		title: "Ô tô chạy",
+		description: "Viết chương trình mô tả chiếc ô tô chuyển động trên màn hình",
+		image: require("../assets/practice1.png"),
+	},
+	{
+		title: "Ô tô chạy",
+		description: "Viết chương trình mô tả chiếc ô tô chuyển động trên màn hình",
+		image: require("../assets/practice1.png"),
+	},
+	{
+		title: "Ô tô chạy",
+		description: "Viết chương trình mô tả chiếc ô tô chuyển động trên màn hình",
+		image: require("../assets/practice1.png"),
+	},
+];
