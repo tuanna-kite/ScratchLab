@@ -90,6 +90,12 @@ export const practiceData: { [key: string]: PracticeData[] } = {
     // },
   ],
 };
+export type Exercise = {
+	title: string;
+	description: string;
+	image: ImageSourcePropType;
+};
+
 export const excercises: Exercise[] = [
 	{
 		title: "Ô tô chạy",
