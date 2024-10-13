@@ -4,6 +4,8 @@
 
 **ScratchLearning** is an educational app designed to help children begin their journey into programming through Scratch. The app provides high-quality, engaging lessons aimed at introducing young learners to fundamental programming concepts in a fun and interactive way.
 
+[DEMO - DOWNLOAD APK](https://drive.google.com/drive/u/0/folders/11kUedeW-GBotYD7ht_fPh9DnekzgDrm8)
+
 ## Key Features
 
 - **Video Lessons by Level**: Scratch lessons are divided into various levels, making it easy for users to follow a structured learning path based on their skills and progress.
