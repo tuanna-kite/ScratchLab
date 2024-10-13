@@ -1,3 +1,5 @@
+<img src="https://github.com/tuanna-kite/ScratchLab/blob/main/demo/scratch-logo.png?raw=true" width="150" height="150">
+
 # **ScratchLab Application**
 
 **ScratchLearning** is an educational app designed to help children begin their journey into programming through Scratch. The app provides high-quality, engaging lessons aimed at introducing young learners to fundamental programming concepts in a fun and interactive way.
