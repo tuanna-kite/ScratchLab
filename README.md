@@ -2,7 +2,7 @@
 
 # **ScratchLab Application**
 
-**ScratchLearning** is an educational app designed to help children begin their journey into programming through Scratch. The app provides high-quality, engaging lessons aimed at introducing young learners to fundamental programming concepts in a fun and interactive way.
+**ScratchLab** is an educational app designed to help children begin their journey into programming through Scratch. The app provides high-quality, engaging lessons aimed at introducing young learners to fundamental programming concepts in a fun and interactive way.
 
 [DEMO - DOWNLOAD APK](https://drive.google.com/drive/u/0/folders/11kUedeW-GBotYD7ht_fPh9DnekzgDrm8)
 
