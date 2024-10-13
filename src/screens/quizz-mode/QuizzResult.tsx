@@ -1,19 +1,13 @@
-import {
-  Dimensions,
-  StyleSheet,
-  Platform,
-  StatusBar,
-  TouchableOpacity,
-} from "react-native";
-import React from "react";
-import { Box, Image, Text, VStack, View } from "@gluestack-ui/themed";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import { quizzData } from "../../db/quizz";
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Box, Image, Text, VStack, View } from '@gluestack-ui/themed';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { quizzData } from '../../db/quizz';
 
 const show: { [key: string]: string } = {
-  easy: "Easy",
-  medium: "Medium",
-  hard: "Hard",
+  easy: 'Easy',
+  medium: 'Medium',
+  hard: 'Hard',
 };
 
 enum EResultType {
@@ -23,16 +17,16 @@ enum EResultType {
 
 const RETURN_RESULT = {
   [EResultType.GOOD]: {
-    title: "Xin chúc mừng!",
-    description: "Bạn đã trả lời đúng",
-    color: "#16A34A",
-    logo: require("../../assets/good_logo.png"),
+    title: 'Xin chúc mừng!',
+    description: 'Bạn đã trả lời đúng',
+    color: '#16A34A',
+    logo: require('../../assets/good_logo.png'),
   },
   [EResultType.BAD]: {
-    title: "Rất tiếc!",
-    description: "Bạn không trả lời đúng câu nào",
-    color: "#EF4444",
-    logo: require("../../assets/bad_logo.png"),
+    title: 'Rất tiếc!',
+    description: 'Bạn không trả lời đúng câu nào',
+    color: '#EF4444',
+    logo: require('../../assets/bad_logo.png'),
   },
 };
 
@@ -45,41 +39,40 @@ const QuizzResult = () => {
   return (
     <VStack
       flex={1}
-      bg="$white"
-      justifyContent="center"
-      alignItems="center"
-      px={"$12"}
-      gap={"$3"}
+      bg='$white'
+      justifyContent='center'
+      alignItems='center'
+      px={'$12'}
+      gap={'$3'}
     >
-      {Platform.OS == "android" && <StatusBar barStyle="light-content" />}
-      <Image source={RETURN_RESULT[result].logo} alt="logo" />
-      <VStack gap={"$1"}>
+      <Image source={RETURN_RESULT[result].logo} alt='logo' />
+      <VStack gap={'$1'}>
         <Text
-          textAlign="center"
-          fontWeight="700"
-          fontSize={"$3xl"}
-          color="$coolGray800"
+          textAlign='center'
+          fontWeight='700'
+          fontSize={'$3xl'}
+          color='$coolGray800'
         >
           {RETURN_RESULT[result].title}
         </Text>
-        <Text textAlign="center" fontSize={"$md"} color="$coolGray800">
+        <Text textAlign='center' fontSize={'$md'} color='$coolGray800'>
           {RETURN_RESULT[result].description}
         </Text>
       </VStack>
       <Text
-        textAlign="center"
-        fontWeight="700"
-        fontSize="$3xl"
+        textAlign='center'
+        fontWeight='700'
+        fontSize='$3xl'
         color={RETURN_RESULT[result].color}
       >
         {route.params.point}/{route.params.length}
       </Text>
-      <TouchableOpacity onPress={() => navigation.navigate("Quizz")}>
-        <Box bgColor="#3758F9" py={"$2.5"} px={"$8"} rounded={"$xl"}>
-          <Text color="$white">Tiếp tục học</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Quizz')}>
+        <Box bgColor='#3758F9' py={'$2.5'} px={'$8'} rounded={'$xl'}>
+          <Text color='$white'>Tiếp tục học</Text>
         </Box>
       </TouchableOpacity>
-      {/* 
+      {/*
       <Box>
         <View style={styles.box__score}>
           <View style={[styles.ques, styles.ques__total]}>
@@ -110,52 +103,52 @@ export default QuizzResult;
 const styles = StyleSheet.create({
   text__main: {
     fontSize: 30,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginTop: 50,
   },
   text__level: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginTop: 5,
     marginBottom: 20,
   },
   text__comment: {
     fontSize: 40,
-    fontWeight: "bold",
-    color: "#3D7944",
+    fontWeight: 'bold',
+    color: '#3D7944',
   },
   text__score: {
     fontSize: 20,
-    fontWeight: "bold",
-    color: "#3D7944",
+    fontWeight: 'bold',
+    color: '#3D7944',
     marginTop: 10,
   },
   box__score: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginTop: 20,
   },
   ques: {
     width: 100,
     height: 100,
     borderRadius: 50,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     margin: 5,
   },
   ques__total: {
-    backgroundColor: "#F7D46B",
+    backgroundColor: '#F7D46B',
   },
   ques__true: {
-    backgroundColor: "#3D7944",
+    backgroundColor: '#3D7944',
   },
   ques__false: {
-    backgroundColor: "#D00809",
+    backgroundColor: '#D00809',
   },
   ques__num: {
     fontSize: 35,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   text__white: {
-    color: "#FFFFFF",
+    color: '#FFFFFF',
   },
 });

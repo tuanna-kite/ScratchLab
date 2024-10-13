@@ -1,12 +1,7 @@
-import {
-  StyleSheet,
-  Platform,
-  StatusBar,
-  TouchableOpacity,
-} from "react-native";
-import { Image, Box, Text, VStack } from "@gluestack-ui/themed";
-import React from "react";
-import { useNavigation } from "@react-navigation/native";
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import { Image, Box, Text, VStack } from '@gluestack-ui/themed';
+import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 interface LevelInfo {
   text: string;
@@ -14,48 +9,47 @@ interface LevelInfo {
 }
 
 const levels: LevelInfo[] = [
-  { text: "Dễ", level: "easy" },
-  { text: "Trung Bình", level: "medium" },
-  { text: "Khó", level: "hard" },
+  { text: 'Dễ', level: 'easy' },
+  { text: 'Trung Bình', level: 'medium' },
+  { text: 'Khó', level: 'hard' },
 ];
 
-const OPTION_COLOR = ["#44EFB2", "#FFA800", "#FF516F"];
+const OPTION_COLOR = ['#44EFB2', '#FFA800', '#FF516F'];
 
 const Quizz = () => {
   const navigation = useNavigation<any>();
   return (
     <VStack
       flex={1}
-      gap={"$12"}
-      px={"$8"}
-      py={"$4"}
-      justifyContent="space-between"
-      bg="$white"
+      gap={'$12'}
+      px={'$8'}
+      py={'$4'}
+      justifyContent='space-between'
+      bg='$white'
     >
-      {Platform.OS == "android" && <StatusBar barStyle="light-content" />}
       <Image
-        source={require("../../assets/question_logo.png")}
-        w="$full"
+        source={require('../../assets/question_logo.png')}
+        w='$full'
         height={200}
-        resizeMode="contain"
-        alt="logo"
+        resizeMode='contain'
+        alt='logo'
       />
-      <VStack gap={"$6"}>
+      <VStack gap={'$6'}>
         {levels.map((info, index) => (
           <TouchableOpacity
             key={info.level}
             onPress={() =>
-              navigation.navigate("QuizzScreen", { level: info.level })
+              navigation.navigate('QuizzScreen', { level: info.level })
             }
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
           >
             <Box
               backgroundColor={OPTION_COLOR[index]}
-              py={"$3"}
-              alignItems="center"
-              rounded={"$lg"}
+              py={'$3'}
+              alignItems='center'
+              rounded={'$lg'}
             >
-              <Text fontWeight="$semibold" color="$white" fontSize={"$2xl"}>
+              <Text fontWeight='$semibold' color='$white' fontSize={'$2xl'}>
                 {info.text}
               </Text>
             </Box>
@@ -63,7 +57,7 @@ const Quizz = () => {
         ))}
       </VStack>
       <Box>
-        <Text textAlign="center" fontSize={"$sm"} color="$coolGray500">
+        <Text textAlign='center' fontSize={'$sm'} color='$coolGray500'>
           Lựa chọn mức độ câu hỏi
         </Text>
       </Box>
@@ -75,18 +69,18 @@ export default Quizz;
 
 const styles = StyleSheet.create({
   textmain: {
-    color: "#A1783F",
+    color: '#A1783F',
     fontSize: 30,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginBottom: 20,
   },
   box: {
-    width: "100%",
+    width: '100%',
     height: 41,
-    alignItems: "center",
+    alignItems: 'center',
     marginBottom: 20,
   },
   text: {
-    color: "#FFFFFF",
+    color: '#FFFFFF',
   },
 });

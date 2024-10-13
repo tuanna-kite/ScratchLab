@@ -65,7 +65,7 @@ export interface IPuzzle {
 export const puzzleData: IPuzzle[] = [
 	{
 		id: 1,
-		image: "https://skhcn.bacninh.gov.vn/documents/22549/69518/Hanh-tinh-thang-hang-2878-1710840354.jpg/c655ed90-327f-d1b4-1b66-c323a7c69046?t=1711122067305",
+		image: "https://i2.wp.com/blog.electricbricks.com/wp-content/uploads/2019/01/Banner-Blog-SCRATCH.jpg?fit=650%2C340",
 		mode: EMode.EASY,
 		result: ["1", "8", "3"],
 	},

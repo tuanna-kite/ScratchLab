@@ -8,5 +8,6 @@ export interface IData {
   image: string;
   title: string;
   description: string;
-  content?: string;
+  content?: string[];
+  videoUrl?: string;
 }
